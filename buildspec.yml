@@ -17,7 +17,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push 124355663661.dkr.ecr.ap-northeast-3.amazonaws.com/g4-feedback-ecs
       - echo Writing image definitions file...
-      - printf '[{"name":"message-container","imageUri":"%s"}]' 124355663661.dkr.ecr.ap-northeast-3.amazonaws.com/g4-feedback-ecs:feedbackservicev1 > imagedefinitions.json
+      - printf '[{"name":"feedbackservicev1","imageUri":"%s"}]' 124355663661.dkr.ecr.ap-northeast-3.amazonaws.com/g4-feedback-ecs:feedbackservicev1 > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
